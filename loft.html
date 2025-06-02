@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Your Construction Company</title>
+  <link rel="stylesheet" href="css/gallary.css">
+</head>
+<body>
+
+<header class="contact-hero">
+    <div class="navbar">
+    <img src="images/logo.png" alt="Allied Construction Logo" class="logo">
+    <nav class="nav-links">
+      <span class="call-now">Call Now <strong>07388722192</strong></span>
+      <a class="active" href="index.html">Projects</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+
+</header>
+
+  <!-- HERO BANNER -->
+<section class="project-hero">
+    <h1>Loft</h1>
+</section>
+
+  <!-- PROJECTS GRID -->
+
+  <div class="gallery">
+    <img src="image/Loft/l1.jpg" alt="Project 1" onclick="openLightbox(0)">
+    <img src="image/Loft/l2.jpg" alt="Project 2" onclick="openLightbox(1)">
+    <img src="image/Loft/l3.jpeg" alt="Project 3" onclick="openLightbox(2)">
+    <img src="image/Loft/l4.jpeg" alt="Project 3" onclick="openLightbox(3)">
+    <img src="image/Loft/l5.jpeg" alt="Project 3" onclick="openLightbox(4)">
+    <img src="image/Loft/l6.jpeg" alt="Project 3" onclick="openLightbox(5)">
+    <img src="image/Loft/l7.jpg" alt="Project 3" onclick="openLightbox(6)">
+    <img src="image/Loft/l8.jpg" alt="Project 3" onclick="openLightbox(7)">
+    <img src="image/Loft/l9.jpg" alt="Project 3" onclick="openLightbox(8)">
+    <img src="image/Loft/l10.jpg" alt="Project 3" onclick="openLightbox(9)">
+    <img src="image/Loft/l11.jpg" alt="Project 3" onclick="openLightbox(11)">
+  </div>
+
+    <!-- Lightbox modals -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img" style="display: none;" src="" alt="">
+    <video id="lightbox-video" style="display: none;" controls></video>
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+
+<script>
+    const media = [
+      { type: 'image', src: 'image/Loft/l1.jpg' },
+      { type: 'image', src: 'image/Loft/l2.jpg' },
+      { type: 'image', src: 'image/Loft/l3.jpeg' },
+      { type: 'image', src: 'image/Loft/l4.jpeg' },
+      { type: 'image', src: 'image/Loft/l5.jpeg' },
+      { type: 'image', src: 'image/Loft/l6.jpeg' },
+      { type: 'image', src: 'image/Loft/l7.jpg' },
+      { type: 'image', src: 'image/Loft/l8.jpg' },
+      { type: 'image', src: 'image/Loft/l9.jpg' },
+      { type: 'image', src: 'image/Loft/l10.jpg' },
+      { type: 'image', src: 'image/Loft/l11.jpg' }
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index, mediaType) {
+      currentIndex = index;
+      const item = media[currentIndex];
+      const img = document.getElementById('lightbox-img');
+      const video = document.getElementById('lightbox-video');
+
+      if (item.type === 'image') {
+        img.src = item.src;
+        img.style.display = 'block';
+        video.pause();
+        video.style.display = 'none';
+      } else if (item.type === 'video') {
+        video.src = item.src;
+        video.style.display = 'block';
+        video.play();
+        img.style.display = 'none';
+      }
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.getElementById('lightbox-video').pause();
+    }
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = media.length - 1;
+      } else if (currentIndex >= media.length) {
+        currentIndex = 0;
+      }
+      openLightbox(currentIndex, media[currentIndex].type);
+    }
+  </script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column">
+      <h3>ABOUT ALLIED CONSTRUCTION</h3>
+      <p>
+        <strong>Our team at Allied Construction Trading</strong> consists of professionals with extensive experience in the field of contracting and construction. 
+        Leading the way in different kinds of construction fields, we deliver high quality work with the goal to give clients more than they expect.
+        We pride ourselves in our professionalism and determination. Please contact us to get to know more about our services.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>BUSINESS HOURS</h3>
+      <p>Our support available to help</p>
+      <ul>
+        <li><strong>Monday–Friday:</strong> 9am to 5pm</li>
+        <li><strong>Saturday:</strong> 10am to 2pm</li>
+        <li><strong>Sunday:</strong> Closed</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONSTRUCTION OFFICE</h3>
+      <p>📞 07388722192</p>
+      <p>📧 <a href="mailto:nadeemanwar734@yahoo.com">nadeemanwar734@yahoo.com</a></p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>

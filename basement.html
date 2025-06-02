@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Your Construction Company</title>
+  <link rel="stylesheet" href="css/gallary.css">
+</head>
+<body>
+
+<header class="contact-hero">
+    <div class="navbar">
+    <img src="images/logo.png" alt="Allied Construction Logo" class="logo">
+    <nav class="nav-links">
+      <span class="call-now">Call Now <strong>07388722192</strong></span>
+      <a class="active" href="index.html">Projects</a>
+      <a href="contact.html">Contact Us</a>
+    </nav>
+  </div>
+
+</header>
+
+  <!-- HERO BANNER -->
+<section class="project-hero">
+    <h1>Basement</h1>
+</section>
+
+  <!-- PROJECTS GRID -->
+
+  <div class="gallery">
+    <img src="image/basement/b1.jpg" alt="Project 1" onclick="openLightbox(0)">
+    <img src="image/basement/b2.jpg" alt="Project 2" onclick="openLightbox(1)">
+    <img src="image/basement/b3.jpg" alt="Project 3" onclick="openLightbox(2)">
+    <video src="image/basement/b4.mp4" controls onclick="openLightbox(3, 'video')"></video>
+    <img src="image/basement/b5.jpeg" alt="Project 3" onclick="openLightbox(4)">
+    <img src="image/basement/b6.jpeg" alt="Project 3" onclick="openLightbox(5)">
+    <img src="image/basement/b8.jpeg" alt="Project 3" onclick="openLightbox(6)">
+    <img src="image/basement/b9.jpeg" alt="Project 3" onclick="openLightbox(8)">
+    <img src="image/basement/b10.jpeg" alt="Project 3" onclick="openLightbox(9)">
+    <img src="image/basement/b11.jpeg" alt="Project 3" onclick="openLightbox(10)">
+    <img src="image/basement/b12.jpeg" alt="Project 3" onclick="openLightbox(11)">
+    <img src="image/basement/b13.jpeg" alt="Project 3" onclick="openLightbox(12)">
+    <img src="image/basement/b15.jpeg" alt="Project 3" onclick="openLightbox(13)">
+    <img src="image/basement/b16.jpeg" alt="Project 3" onclick="openLightbox(14)">
+    <img src="image/basement/b17.jpeg" alt="Project 3" onclick="openLightbox(15)">
+    <img src="image/basement/b18.jpeg" alt="Project 3" onclick="openLightbox(16)">
+    <img src="image/basement/b19.jpeg" alt="Project 3" onclick="openLightbox(17)">
+    <img src="image/basement/b20.jpeg" alt="Project 3" onclick="openLightbox(18)">
+    <img src="image/basement/b21.jpeg" alt="Project 3" onclick="openLightbox(19)">
+    <img src="image/basement/b22.jpeg" alt="Project 3" onclick="openLightbox(20)">
+    <img src="image/basement/b23.jpeg" alt="Project 3" onclick="openLightbox(21)">
+    <img src="image/basement/b24.jpeg" alt="Project 3" onclick="openLightbox(22)">
+    <img src="image/basement/b25.jpeg" alt="Project 3" onclick="openLightbox(23)">
+    <img src="image/basement/b26.jpeg" alt="Project 3" onclick="openLightbox(24)">
+    <img src="image/basement/b27.jpeg" alt="Project 3" onclick="openLightbox(25)">
+    <img src="image/basement/b28.jpeg" alt="Project 3" onclick="openLightbox(26)">
+    <img src="image/basement/b29.jpeg" alt="Project 3" onclick="openLightbox(27)">
+    <img src="image/basement/b30.jpeg" alt="Project 3" onclick="openLightbox(28)">
+    <img src="image/basement/b31.jpeg" alt="Project 3" onclick="openLightbox(29)">
+    <img src="image/basement/b32.jpeg" alt="Project 3" onclick="openLightbox(30)">
+    <img src="image/basement/b33.jpeg" alt="Project 3" onclick="openLightbox(31)">
+    <img src="image/basement/b34.jpeg" alt="Project 3" onclick="openLightbox(32)">
+    <img src="image/basement/b35.jpeg" alt="Project 3" onclick="openLightbox(33)">
+    <img src="image/basement/b36.jpg" alt="Project 3" onclick="openLightbox(34)">
+  </div>
+
+    <!-- Lightbox modals -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
+    <img id="lightbox-img" style="display: none;" src="" alt="">
+    <video id="lightbox-video" style="display: none;" controls></video>
+    <span class="next" onclick="changeSlide(1)">&#10095;</span>
+  </div>
+
+<script>
+    const media = [
+      { type: 'image', src: 'image/basement/b1.jpg' },
+      { type: 'image', src: 'image/basement/b2.jpg' },
+      { type: 'image', src: 'image/basement/b3.jpg' },
+      { type: 'video', src: 'image/basement/b4.mp4' },
+      { type: 'image', src: 'image/basement/b5.jpeg' },
+      { type: 'image', src: 'image/basement/b6.jpeg' },
+      { type: 'image', src: 'image/basement/b8.jpeg' },
+      { type: 'image', src: 'image/basement/b9.jpeg' },
+      { type: 'image', src: 'image/basement/b10.jpeg' },
+      { type: 'image', src: 'image/basement/b11.jpeg' },
+      { type: 'image', src: 'image/basement/b12.jpeg' },
+      { type: 'image', src: 'image/basement/b13.jpeg' },
+      { type: 'image', src: 'image/basement/b15.jpeg' },
+      { type: 'image', src: 'image/basement/b16.jpeg' }, 
+      { type: 'image', src: 'image/basement/b17.jpeg' }, 
+      { type: 'image', src: 'image/basement/b18.jpeg' }, 
+      { type: 'image', src: 'image/basement/b19.jpeg' }, 
+      { type: 'image', src: 'image/basement/b20.jpeg' }, 
+      { type: 'image', src: 'image/basement/b21.jpeg' }, 
+      { type: 'image', src: 'image/basement/b22.jpeg' }, 
+      { type: 'image', src: 'image/basement/b23.jpeg' }, 
+      { type: 'image', src: 'image/basement/b24.jpeg' }, 
+      { type: 'image', src: 'image/basement/b25.jpeg' },
+      { type: 'image', src: 'image/basement/b26.jpeg' },
+      { type: 'image', src: 'image/basement/b27.jpeg' },
+      { type: 'image', src: 'image/basement/b28.jpeg' },
+      { type: 'image', src: 'image/basement/b29.jpeg' },
+      { type: 'image', src: 'image/basement/b30.jpeg' },
+      { type: 'image', src: 'image/basement/b31.jpeg' },
+      { type: 'image', src: 'image/basement/b32.jpeg' },
+      { type: 'image', src: 'image/basement/b33.jpeg' },
+      { type: 'image', src: 'image/basement/b34.jpeg' },
+      { type: 'image', src: 'image/basement/b35.jpeg' },
+      { type: 'image', src: 'image/basement/b36.jpg' }                                                              
+    ];
+
+    let currentIndex = 0;
+
+    function openLightbox(index, mediaType) {
+      currentIndex = index;
+      const item = media[currentIndex];
+      const img = document.getElementById('lightbox-img');
+      const video = document.getElementById('lightbox-video');
+
+      if (item.type === 'image') {
+        img.src = item.src;
+        img.style.display = 'block';
+        video.pause();
+        video.style.display = 'none';
+      } else if (item.type === 'video') {
+        video.src = item.src;
+        video.style.display = 'block';
+        video.play();
+        img.style.display = 'none';
+      }
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('active');
+      document.getElementById('lightbox-video').pause();
+    }
+
+    function changeSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = media.length - 1;
+      } else if (currentIndex >= media.length) {
+        currentIndex = 0;
+      }
+      openLightbox(currentIndex, media[currentIndex].type);
+    }
+  </script>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-column">
+      <h3>ABOUT ALLIED CONSTRUCTION</h3>
+      <p>
+        <strong>Our team at Allied Construction Trading</strong> consists of professionals with extensive experience in the field of contracting and construction. 
+        Leading the way in different kinds of construction fields, we deliver high quality work with the goal to give clients more than they expect.
+        We pride ourselves in our professionalism and determination. Please contact us to get to know more about our services.
+      </p>
+    </div>
+
+    <div class="footer-column">
+      <h3>BUSINESS HOURS</h3>
+      <p>Our support available to help</p>
+      <ul>
+        <li><strong>Monday–Friday:</strong> 9am to 5pm</li>
+        <li><strong>Saturday:</strong> 10am to 2pm</li>
+        <li><strong>Sunday:</strong> Closed</li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h3>CONSTRUCTION OFFICE</h3>
+      <p>📞 07388722192</p>
+      <p>📧 <a href="mailto:nadeemanwar734@yahoo.com">nadeemanwar734@yahoo.com</a></p>
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
